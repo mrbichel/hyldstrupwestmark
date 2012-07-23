@@ -1,28 +1,98 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static admin_modify grp_tags %}
 
-<h1>Email attendants</h1>
+{% block breadcrumbs %}
+    <ul>
+        <li><a href="../../../../">{% trans "Home" %}</a></li>
+        <li><a href="../../../">{{ app_label|capfirst|escape }}</a></li>
+        <li>{% if has_change_permission %}<a href="../../">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}</li>
+       
+        <li><a href="../">{{ occurrence }}</a></li>
 
-{% if occurrence.signup_set.all %}
+        {% if title %}<li>{{ title }}</li>{% endif %}
+    </ul>
+{% endblock %}
 
-<p>Send an email to all attendants of the course {{ occurrence.course.title }} on {{ occurrence.start }}.</p>
 
-<form action="" method="post">
-{% csrf_token %}
+{% block title %}{{ title }}{% endblock %}
 
-{{ form.as_p }}
 
-<p>This will send an email to the following <!--{{ occurrence.signup_set.all.count }} plural singular here--> people who have signed up for the course</p>
+{% block content %}
+<div id="content-main">
 
-<table>
-{% for s in occurrence.signup_set.all %}
-    <tr>
-        <td>{{ s.first_name }} {{ s.last_name }}</td>
-        <td>{{ s.email }}</td>
-    </tr>
-{% endfor %}
-</table>
+    {% if occurrence.signup_set.all %}
 
-<input type="submit" value="send emails" />
+    <p></p>
 
-{% else %}
-<p> No one has signed up for this course yet, so you can't send them an email.</p>
-{% endif %}
+    <form action="" method="post">
+    {% csrf_token %}
+
+
+{% spaceless %}
+<fieldset class="grp-module grp-collapse grp-open">
+
+    <div class="grp-row">
+        <p class="grp-description">Send an email to all attendants of the course {{ occurrence.course.title }} on {{ occurrence.start }}.</p>
+    </div>
+
+    <div class="grp-row">
+        <div class="l-2c-fluid l-d-4">
+            <div class="c-1"><label class="required">{{ form.subject.label }}</label></div>
+            <div class="c-2">
+                <input type="text" name="subject" id="id_subject" class="vTextField">
+                <p class="grp-help">{{ form.subject.helptext }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grp-row">
+        <div class="l-2c-fluid l-d-4">
+            <div class="c-1"><label class="required">Recipients</label></div>
+            <div class="c-2">
+                <table>
+                {% for s in occurrence.signup_set.all %}
+                    <tr>
+                        <td>{{ s.first_name }} {{ s.last_name }}</td>
+                        <td>{{ s.email }}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+                <p class="grp-help">These people will receive the message</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="grp-row">
+        <div class="l-2c-fluid l-d-4">
+            <div class="c-1"><label class="required">{{ form.message.label }}</label></div>
+            <div class="c-2">
+                {{ form.message }}
+                <p class="grp-help">{{ form.message.helptext }}</p>
+            </div>
+        </div>
+    </div>
+
+
+</fieldset>
+{% endspaceless %}
+
+    <footer class="grp-module grp-submit-row grp-fixed-footer">
+        <header style="display:none"><h1>Submit Options</h1></header>
+        <ul>
+            <li class="grp-float-left"><a class="grp-button grp-cancel-link" href="../">cancel</a></li>
+            <li><input type="submit" value="send emails" class="grp-button grp-default"/></li>
+        </ul>
+    </footer>
+
+
+
+
+    {% else %}
+
+    <p>No one has signed up for this course yet, so you can't send them an email.</p>
+
+    {% endif %}
+
+</div>
+{% endblock %}

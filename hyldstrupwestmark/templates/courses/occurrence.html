@@ -1,10 +1,67 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load markup %}
+{% load flatblock_tags %}
 
-</body>
-</html>
+{% block title %}{{ occurrence.course.title }} - {{ occurrence.start }}{% endblock %}
+{% block description %}{{ occurrence.course.description|striptags }}{% endblock %}
+
+{% block content %}
+
+    <article id="occurrence-{{ occurrence.id }}">
+
+        <header>
+            <h1>{{ occurrence.course.title }}</h1>
+        </header>
+
+        <section class="summary">
+            <dl>
+
+            <dt>Time:</dt>
+            <dd>
+                <time>{{ occurrence.start }}</time>
+                {% if occurrence.end %}
+                to
+                <time>
+                    {% if occurrence.end.date == occurrence.start.date  %}
+                    {{ occurrence.end|time }}
+                    {% else %}
+                    {{ occurrence.end }}
+                    {% endif %}
+                </time>
+                {% endif %}
+                </dd>
+            <dt>Location:</dt> <dd>{{ occurrence.location }}</dd>
+            <dt>Price:</dt> <dd>{{ occurrence.price }} DKK</dd>
+            </dl>
+
+            <p>{{ occurrence.course.description }}</p>
+            <a href="{{ occurrence.course.get_absolute_url }}">read more</a>
+        </section>
+
+        <section class="specific-info">
+            <h2>Details</h2>
+            {{ occurrence.details }}
+        </section>
+
+        <section id="coursesignupform">
+            <h2>Sign up</h2>
+
+        {% if occurrence.status == occurrence.OPEN_STATUS %}
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_ul }}
+
+                <p>{% flatblock 'signup.terms' %}</p>
+
+                <input type="submit" value="sign up now" />
+            </form>
+        </section>
+        {% elif occurrence.status == occurrence.CLOSED_STATUS %}
+            <p>Sign up for this course is closed.</p>
+        {% elif occurrence.status == occurrence.FULL_STATUS %}
+            <p>This course is already filled.</p>
+        {% endif %}
+
+    </article>
+
+{% endblock %}
