@@ -1,0 +1,28 @@
+
+<h1>Email attendants</h1>
+
+{% if occurrence.signup_set.all %}
+
+<p>Send an email to all attendants of the course {{ occurrence.course.title }} on {{ occurrence.start }}.</p>
+
+<form action="" method="post">
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<p>This will send an email to the following <!--{{ occurrence.signup_set.all.count }} plural singular here--> people who have signed up for the course</p>
+
+<table>
+{% for s in occurrence.signup_set.all %}
+    <tr>
+        <td>{{ s.first_name }} {{ s.last_name }}</td>
+        <td>{{ s.email }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+<input type="submit" value="send emails" />
+
+{% else %}
+<p> No one has signed up for this course yet, so you can't send them an email.</p>
+{% endif %}

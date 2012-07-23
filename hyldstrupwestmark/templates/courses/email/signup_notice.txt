@@ -1,0 +1,14 @@
+{% autoescape off %}Hi Hyldstrup & Westmark,
+
+{{ data.first_name }} {{ data.last_name }} have just requested to sign up for the course {{ data.occurrence.course.title }} on {{ data.occurrence.start }}.
+
+The request:
+Email: {{ data.email }}
+Phone: {{ data.phone }}
+First name: {{ data.first_name }}
+Last name: {{ data.last_name }}
+Note: {{ data.note }}
+
+Remember to confirm the payment and send a final confirmation.
+
+{% endautoescape %}

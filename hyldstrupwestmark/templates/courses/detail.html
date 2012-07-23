@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load markup %}
+
+{% block title %}{{ course.title }}{% endblock %}
+
+{% block description %}{{ course.description|striptags }}{% endblock %}
+
+{% block content %}
+
+    <article id="{{ course.slug }}">
+
+        <header>
+            <h1>{{ course.title }}</h1>
+        </header>
+
+        <section class="body">
+            {{ course.body|markdown }}
+        </section>
+
+        <section class="occurrences">
+            <h2>Coming course dates</h2>
+            {% if course.get_future_occurrences %}
+            <table>
+                {% for occ in course.get_future_occurrences %}
+                <tr>
+                    <td>
+                        {{ occ.start }}
+
+                        {% if occ.end %}
+                        to
+                            {% if occ.end.date == occ.start.date  %}
+                        {{ occ.end|time }}
+                            {% else %}
+                        {{ occ.end }}
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url occurrence occ.id %}">sign up</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </table>
+            {% else %}
+                <p>There are no coming course dates. Contact us to let us know if you would like one scheduled.</p>
+            {% endif %}
+        </section>
+
+
+    </article>
+
+{% endblock %}

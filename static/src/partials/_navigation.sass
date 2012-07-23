@@ -1,0 +1,37 @@
+#main-navigation
+  +margin-trailer
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      margin-bottom: 7px
+      font:
+        weight: bold
+      a
+        color: #aaa
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+          color: #000
+      &.expanded, &.active
+        ul
+          display: block
+      &.active
+        a
+          color: #000
+
+      ul // sub menus
+        display: none
+        margin-left: 10px
+        +margin-trailer
+        li
+          margin: 0
+          font:
+            size: 1em
+            weight: normal
+          &.active
+            a
+              font-weight: bold
+
+

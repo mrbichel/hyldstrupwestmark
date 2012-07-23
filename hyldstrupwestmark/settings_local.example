@@ -1,0 +1,11 @@
+SECRET_KEY = ''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'malenedb',                      # Or path to database file if using sqlite3.
+        'PASSWORD: '',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}

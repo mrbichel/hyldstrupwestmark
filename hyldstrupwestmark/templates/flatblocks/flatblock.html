@@ -1,0 +1,10 @@
+<div class="flatblock block-{{ flatblock.slug }}">
+{% if flatblock.header %}
+    <h2 class="title">{{ flatblock.header }}</h2>
+{% endif %}
+    <div class="content">{{ flatblock.content|safe }}</div>
+
+{% if user.is_staff %}
+    <a href="{% url flatblocks-edit flatblock.id %}">edit</a>
+{% endif %}
+</div>

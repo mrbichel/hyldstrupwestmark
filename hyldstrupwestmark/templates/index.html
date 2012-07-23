@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load markup %}
+{% load thumbnail %}
+{% load flatblock_tags %}
+
+{% block title %}Hyldstrup & Westmark{% endblock %}
+
+{% block body-class %}index{% endblock %}
+
+{% block content %}
+
+<section id="introduction">
+{% flatblock "introduction" %}
+</section>
+
+<section id="currently">
+    <h1 class="section-title">Kurser</h1>
+
+    {% for object in course_list  %}
+        <article>
+            <h1><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h1>
+            {{ object.description }}
+        </article>
+
+    {% endfor %}
+
+    <!--<a href="">Se alle</a>-->
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% autoescape off %}Hi {{ signup.first_name }} {{ signup.last_name }},
+
+{{ message }}
+
+--
+Kind Regards Hyldstrup & Westmark
+
+{% endautoescape %}

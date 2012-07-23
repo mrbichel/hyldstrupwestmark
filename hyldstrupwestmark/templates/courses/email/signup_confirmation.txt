@@ -1,0 +1,22 @@
+{% autoescape off %}Hi {{ data.first_name }} {{ data.last_name }},
+
+This is a confirmation that we have received your request to sign up for the course {{ data.occurrence.course.title }}
+
+Please transfer {{ data.occurrence.price }} DKK to account number XXXXXX.
+
+Course details:
+Start: {{ data.occurrence.start }}
+End: {{ data.occurrence.end }}
+Location: {{  data.occurrence.location }}
+
+We have received the following information from you:
+
+Email: {{ data.email }}
+Phone: {{ data.phone }}
+First name: {{ data.first_name }}
+Last name: {{ data.last_name }}
+Note: {{ data.note }}
+
+Kind Regards Hyldstrup & Westmark
+
+{% endautoescape %}
