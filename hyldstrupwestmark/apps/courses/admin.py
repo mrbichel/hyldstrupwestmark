@@ -2,7 +2,7 @@ from django.conf.urls import patterns
 from django.contrib import admin
 from models import Course, Signup, Occurrence
 
-from admin_views import email_attendants
+from admin_views import email_attendees
 
 class SignupInline(admin.StackedInline):
     model = Signup
@@ -16,13 +16,13 @@ class OccurrenceAdmin(admin.ModelAdmin):
     list_filter   = ('course', 'start', 'end')
     inlines = [ SignupInline, ]
 
-    def email_attendants(self, request, id):
-        return email_attendants(request, self, id)
+    def email_attendees(self, request, id):
+        return email_attendees(request, self, id)
 
     def get_urls(self):
         urls = super(OccurrenceAdmin, self).get_urls()
         my_urls = patterns('',
-              (r'^(?P<id>\d+)/email_attendants/$', self.email_attendants)
+              (r'^(?P<id>\d+)/email_attendees/$', self.email_attendees)
         )
         return my_urls + urls
 

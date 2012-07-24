@@ -1,6 +1,8 @@
+from django.contrib import messages
 from django.contrib.auth.decorators import permission_required
 from django.core.mail import send_mail
-from django.http import HttpResponse
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from models import Occurrence
 from forms import EmailAttendantsForm
@@ -9,7 +11,7 @@ from django.template.loader import render_to_string
 from django.conf import settings
 
 @permission_required('courses.add_occurrence')
-def email_attendants(request, model_admin, occurrence_id):
+def email_attendees(request, model_admin, occurrence_id):
 
     opts = model_admin.model._meta
     has_perm = request.user.has_perm(opts.app_label + '.' + opts.get_change_permission())
@@ -36,14 +38,15 @@ def email_attendants(request, model_admin, occurrence_id):
                     [signup.email]
                 )
 
-                return HttpResponse("you emailed them all, great!")
+                messages.success(request, u"Emails where send to all attendees of \"{}\" successfully.".format(occurrence))
+                return HttpResponseRedirect("../")
     else:
         form = EmailAttendantsForm()
 
-    return render(request, 'admin/courses/email_attendants.html', {
+    return render(request, 'admin/courses/email_attendees.html', {
         'occurrence': occurrence,
         'form': form,
-        'title': 'Email attendants',
+        'title': 'Email attendees',
         'opts': opts,
         'app_label': opts.app_label,
         'has_change_permission': has_perm

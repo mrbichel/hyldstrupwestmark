@@ -111,7 +111,7 @@ class Occurrence(models.Model):
     future_objects = FutureOccurrenceManager()
 
     def __unicode__(self):
-        return u"{} | {}".format(self.course.title, self.start)
+        return u"{} on {}".format(self.course.title, self.start)
 
     def save(self, *args, **kwargs):
         if not self.end:
