@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load markup %}
+{% load thumbnail %}
+{% load flatblock_tags %}
+
+{% block title %}Hyldstrup & Westmark{% endblock %}
+
+{% block body-class %}course-list{% endblock %}
+
+{% block content %}
+
+
+<section id="all-courses" class="course-list">
+    <header><h1 class="section-title">Courses</h1></header>
+
+    {% for object in course_list  %}
+       {% include "courses/_course_list_item.html" %}
+    {% endfor %}
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load markup %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block description %}make short non html version of content{% endblock %}
+
+{% block content %}
+    <article id="{{ flatpage.slug }}">
+
+        <header>
+
+            {% if user.is_staff %}
+            <ul class="object-admin-navigation">
+                <li><a href="{% url admin:flatpages_flatpage_change flatpage.id %}">edit</a></li>
+            </ul>
+            {% endif %}
+
+            <h1>{{ flatpage.title }}</h1>
+        </header>
+
+        {{ flatpage.content|markdown }}
+    
+    </article>
+
+
+{% endblock %}

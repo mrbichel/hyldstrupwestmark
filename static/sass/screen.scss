@@ -1,0 +1,207 @@
+// **************************************************
+//
+// MUELLER
+// modular grid system
+//
+// _screen.scss
+//
+// **************************************************
+
+@import "blueprint/reset";
+@import "partials/base";
+@import "partials/default";
+@import "partials/large";
+@import "partials/tablet-portrait";
+@import "partials/handheld";
+@import "partials/handheld-landscape";
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3/border-radius";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+
+@include establish-baseline($base-font-size);
+
+body {
+    font-family: $font-family;
+    font-weight: normal;
+    background-color: $background-color-dark;
+
+    color: $text-color-light;
+    margin: 0; padding: 0;
+    div#wrapper {
+        width: 100%;
+    }
+}
+
+p {
+    @include adjust-font-size-to(16px, 1);
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+section, article {
+    @include trailer(1);
+}
+
+.section-title, #sidebar h1 {
+    @include adjust-font-size-to(16px, 1);
+    @include trailer(1);
+    font-weight: 500;
+}
+
+h1, h2, h3, h4 {
+    display: block;
+    font-family: $font-family;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+h1 {
+    @include adjust-font-size-to(36px, 2);
+    font-weight: 200;
+    color: $text-color;
+    text-transform: uppercase;
+}
+
+h2 {
+    @include adjust-font-size-to(18px, 1);
+    color: $text-color;
+}
+
+
+
+#siteheader {
+    border-color: #000;
+    @include trailing-border(2px);
+
+    .container {
+        @include padding-leader(1);
+    }
+
+    nav ul {
+
+        @include leader(1);
+
+
+        li {
+            list-style-type: none;
+            display: block;
+            float: left;
+            padding-right: 1em;
+
+            a {
+                text-decoration: none;
+                color: rgba(190,250,180,1);
+            }
+        }
+    }
+
+    h2 {
+        color: rgba(210,212,210,1);
+    }
+
+    h1.logo {
+    @include adjust-font-size-to(42px, 2);
+    a {
+        color: rgba(250,255,250,1);
+    }
+}
+
+}
+
+a.button {
+    display: inline-block;
+
+    @include adjust-font-size-to(14px, 1);
+
+    @include rhythm(0.25, 0.25, 0.25, 0.25);
+	padding-right: 0.75em;
+    padding-left: 0.75em;
+
+	whitespace: nowrap;
+	text-align: center;
+	text-decoration: none;
+	color: $background-color;
+	background-color: $background-color-dark;
+
+	@include border-radius(4px, 4px);
+
+    &:hover {
+        color: $highlight-color;
+    }
+
+    
+}
+
+
+#estill-logo {
+
+    img {
+        width: auto;
+        float: right;
+        height: $base-rhythm-unit*2;
+    }
+}
+
+
+.course-list {
+    article {
+        position: relative;
+        h1 {
+            @include adjust-font-size-to(26px, 1);
+        }
+    }
+
+    p {
+        @include adjust-font-size-to(18px, 1);
+        @include rhythm(0.25, 0, 0, 0.75);
+    }
+}
+
+#content {
+    @include padding-leader(1);
+
+    color: $text-color;
+    background: $background-color;
+}
+
+
+.object-admin-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+        li {
+            list-style-type: none;
+            display: inline;
+            a {
+
+                display: inline-block;
+
+                @include adjust-font-size-to(12px, 0.75);
+
+                padding: 2px 8px;
+
+                whitespace: nowrap;
+                text-align: center;
+                text-decoration: none;
+                color: $background-color;
+                background-color: rgba(darken($background-color-dark, 15%), 0.5);
+
+                @include border-radius(4px, 4px);
+
+                &:hover {
+                    color: $highlight-color;
+                }
+
+
+            }
+        }
+}
+
+#main {position: relative;}
+
+.flatblock {position: relative;}

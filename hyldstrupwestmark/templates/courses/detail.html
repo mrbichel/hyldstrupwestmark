@@ -10,6 +10,13 @@
     <article id="{{ course.slug }}">
 
         <header>
+
+            {% if user.is_staff %}
+            <ul class="object-admin-navigation">
+                <li><a href="{% url admin:courses_course_change course.id %}">edit</a></li>
+            </ul>
+            {% endif %}
+
             <h1>{{ course.title }}</h1>
         </header>
 
@@ -17,7 +24,7 @@
             {{ course.body|markdown }}
         </section>
 
-        <section class="occurrences">
+        <section id="occurrences" class="occurrence-list">
             <h2>Coming course dates</h2>
             {% if course.get_future_occurrences %}
             <table>
@@ -36,7 +43,7 @@
                         {% endif %}
                     </td>
                     <td>
-                        <a href="{% url occurrence occ.id %}">sign up</a>
+                        <a href="{% url occurrence occ.id %}" class="button">sign up</a>
                     </td>
                 </tr>
                 {% endfor %}

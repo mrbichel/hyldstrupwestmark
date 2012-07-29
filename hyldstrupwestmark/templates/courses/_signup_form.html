@@ -1,0 +1,29 @@
+{% load flatblock_tags %}
+<form action="" method="post">
+{% csrf_token %}
+
+    <fieldset>
+
+        <ol>
+
+        {% for field in form %}
+
+
+
+            <li>
+                {{ field.errors }}
+                <label for={{ field.name }}>{{ field.label }}</label>
+                {{ field }}
+            </li>
+
+
+
+        {% endfor %}
+
+        </ol>
+
+    </fieldset>
+
+    {% flatblock 'signup.terms' %}
+    <input type="submit" value="sign up now" />
+</form>

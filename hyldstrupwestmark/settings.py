@@ -32,9 +32,9 @@ else:
 TEMPLATE_DEBUG = DEBUG
 
 # Static files
-MEDIA_ROOT = BASE_PATH + '/static/uploads'
+MEDIA_ROOT = BASE_PATH + '/../static/uploads'
 STATICFILES_DIRS = (
-    BASE_PATH + '/static',
+    BASE_PATH + '/../static',
 )
 
 TIME_ZONE = 'Europe/Copenhagen'
@@ -86,6 +86,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_DIRS = (
@@ -101,7 +102,8 @@ INSTALLED_APPS = (
     'flatblocks',
     'grappelli.dashboard',
     'grappelli',
-
+    'debug_toolbar',
+    
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -132,7 +134,7 @@ LOGGING = {
     }
 }
 
-
+INTERNAL_IPS = ('127.0.0.1',)
 
 
 try:

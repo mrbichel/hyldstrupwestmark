@@ -1,0 +1,19 @@
+<article>
+
+    <header>
+        {% if user.is_staff %}
+        <ul class="object-admin-navigation">
+            <li><a href="{% url admin:courses_course_change object.id %}">edit</a></li>
+        </ul>
+        {% endif %}
+
+        
+
+        <h1><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h1>
+    </header>
+
+
+    <p>{{ object.description }}</p>
+    <a href="{{ object.get_absolute_url }}" class="button">Read more</a>
+    <a href="{{ object.get_absolute_url }}#occurrences" class="button">Sign up</a>
+</article>

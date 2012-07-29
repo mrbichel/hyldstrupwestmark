@@ -1,70 +1,98 @@
 {% load i18n %}
 {% load flatblock_tags %}
+{% load flatpages %}
 
 {% get_current_language as LANG %}
+
 <!DOCTYPE html>
-<html dir="ltr" lang="{{ LANG }}">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="ltr" lang="{{ LANG }}" class="no-js"> <!--<![endif]-->
 <head>
     <title>{% block title %}Hyldstrup og Westmark{% endblock %}</title>
     <meta name="description" content="{% block description %}Estill Voice stemmetræning{% endblock %}">
-
-    <link href="{{ STATIC_URL }}css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="{{ STATIC_URL }}css/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!--[if IE]>
-      <link href="{{ STATIC_URL }}css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="{{ STATIC_URL }}css/grid/output.css" rel="stylesheet" type="text/css" />
+    <link href="{{ STATIC_URL }}css/screen.css" rel="stylesheet" type="text/css" />
 
     <script src="{{ STATIC_URL }}js/lib/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/lib/jquery.cycle.js"></script>
     <script src="{{ STATIC_URL }}js/base.js"></script>
 
     <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
 </head>
 
 <body class="{% block body-class %}{% endblock %}">
 
-<div id="container">
+    <header id="siteheader" class="wrapper">
+        <div class="container g-all-c">
 
-    <header id="siteheader">
-        <hgroup>
-            <h1><a href="{% url index %}">Hyldstrup og Westmark</a></h1>
-            <h2>stemmetræning</h2>
-        </hgroup>
+            <div class="l-2c">
+                <hgroup class="c-1">
+                    <h1 class="logo"><a href="{% url index %}">Hyldstrup &amp; Westmark</a></h1>
+                    <h2>{% trans "International Voice Training" %}</h2>
+                </hgroup>
+
+                <div id="estill-logo" class="c-2">
+                    <img width="240px" src="{{ STATIC_URL }}img/estill_logo.jpg">
+                </div>
+                
+            </div>
+
+            <nav class="l-1c">
+                {% get_flatpages as flatpages %}
+                <ul>
+                    <li><a href="/">{% trans 'Home' %}</a></li>
+                    <li><a href="{% url course_list %}">{% trans 'Courses' %}</a></li>
+                {% for page in flatpages %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+                </ul>
+
+            </nav>
+        </div>
+
     </header>
 
-    <section id="content">
-    {% block content %}
+    <div id="content" class="wrapper">
+        <div class="container g-all-c">
+            <div class="l-2c">
+                <div id="main" class="c-1">
+                {% block content %}
+                {% endblock %}
+                </div>
+                <div id="sidebar" class="c-2">
+                {% block sidebar %}
+                    <section>
+                    <header><h1>Newsletter</h1></header>
+                    <p>Sign up</p>
 
-    {% endblock %}
-    </section>
+                    </section>
 
-    <footer id="sitefooter">
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <p>{% flatblock "footer" %}</p>
-
-        <!--<p>Hosted on a linode, powered by django and python developed by johan.cc</p>-->
-
+    <footer id="sitefooter" class="wrapper">
+        <div class="container g-all-c">
+            <p>{% flatblock "footer" %}</p>
+            <!--<p>Hosted on a linode, powered by django and python developed by johan.cc</p>-->
+        </div>
     </footer>
 
 {% if not user.is_staff %}
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXX-3']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 {% endif %}
 
 
 </div>
-
 </body>
 </html>

@@ -2,6 +2,7 @@
 {% load markup %}
 {% load thumbnail %}
 {% load flatblock_tags %}
+{% load i18n %}
 
 {% block title %}Hyldstrup & Westmark{% endblock %}
 
@@ -10,22 +11,21 @@
 {% block content %}
 
 <section id="introduction">
-{% flatblock "introduction" %}
+    {% flatblock "introduction" %}
 </section>
 
-<section id="currently">
-    <h1 class="section-title">Kurser</h1>
+<section id="current-courses" class="course-list">
+
+    <h1 class="section-title">Current courses</h1>
 
     {% for object in course_list  %}
-        <article>
-            <h1><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h1>
-            {{ object.description }}
-        </article>
-
+        {% include "courses/_course_list_item.html" %}
     {% endfor %}
 
-    <!--<a href="">Se alle</a>-->
-</section>
+    <footer>
+        <a href="{% url course_list %}">{% trans "View all courses" %}</a>
+    </footer>
 
+</section>
 
 {% endblock %}

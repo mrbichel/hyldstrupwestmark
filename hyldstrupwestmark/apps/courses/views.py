@@ -47,6 +47,13 @@ def occurrence(request, id):
     })
 
 
+def list(request):
+    course_list = Course.public_objects.filter()
+
+    return render(request, 'courses/list.html', {
+        'course_list': course_list
+    })
+
 def detail(request, slug):
     course = get_object_or_404(Course, slug=slug)
 

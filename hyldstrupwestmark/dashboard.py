@@ -7,7 +7,6 @@ To activate your index dashboard add the following to your settings.py::
 """
 
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse
 
 from grappelli.dashboard import modules, Dashboard
 from grappelli.dashboard.utils import get_admin_site_name
@@ -44,19 +43,19 @@ class CustomIndexDashboard(Dashboard):
 
 
 
-        #self.children.append(modules.LinkList(
-        #    _('Media Management'),
-        #    column=2,
-        #    children=[
-        #        {
-        #            'title': _('FileBrowser'),
-        #            'url': '/admin/filebrowser/browse/',
-        #            'external': False,
-        #        },
-        #    ]
-        #))
+        self.children.append(modules.LinkList(
+            _('Quick links'),
+            column=2,
+            children=[
+                {
+                    'title': _('View frontpage'),
+                    'url': '/',
+                    'external': False,
+                },
+            ]
+        ))
         
-        # append another link list module for "support".
+        #append another link list module for "support".
         #self.children.append(modules.LinkList(
         #    _('Support'),
         #    column=2,

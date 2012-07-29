@@ -10,6 +10,13 @@
     <article id="occurrence-{{ occurrence.id }}">
 
         <header>
+
+            {% if user.is_staff %}
+            <ul class="object-admin-navigation">
+                <li><a href="{% url admin:courses_occurrence_change occurrence.id %}">edit</a></li>
+            </ul>
+            {% endif %}
+
             <h1>{{ occurrence.course.title }}</h1>
         </header>
 
@@ -35,32 +42,32 @@
             </dl>
 
             <p>{{ occurrence.course.description }}</p>
-            <a href="{{ occurrence.course.get_absolute_url }}">read more</a>
+            <a href="{{ occurrence.course.get_absolute_url }}" class="button">read more</a>
         </section>
 
         <section class="specific-info">
             <h2>Details</h2>
-            {{ occurrence.details }}
+            <p>{{ occurrence.details }}</p>
         </section>
 
         <section id="coursesignupform">
             <h2>Sign up</h2>
 
-        {% if occurrence.status == occurrence.OPEN_STATUS %}
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form.as_ul }}
+            {% if occurrence.status == occurrence.OPEN_STATUS %}
 
-                <p>{% flatblock 'signup.terms' %}</p>
+                {% include "courses/_signup_form.html" %}
 
-                <input type="submit" value="sign up now" />
-            </form>
+            {% elif occurrence.status == occurrence.CLOSED_STATUS %}
+
+                <p>Sign up for this course is closed.</p>
+
+            {% elif occurrence.status == occurrence.FULL_STATUS %}
+
+                <p>This course is already filled.</p>
+
+            {% endif %}
+
         </section>
-        {% elif occurrence.status == occurrence.CLOSED_STATUS %}
-            <p>Sign up for this course is closed.</p>
-        {% elif occurrence.status == occurrence.FULL_STATUS %}
-            <p>This course is already filled.</p>
-        {% endif %}
 
     </article>
 

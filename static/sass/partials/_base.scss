@@ -1,0 +1,29 @@
+// **************************************************
+//
+// MUELLER
+// modular grid system
+//
+// _base.scss
+//
+// global variables and mixins
+//
+// **************************************************
+
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic,700italic);
+
+// font-families
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// colors
+$background-color: #DFECDF;
+$background-color-dark: #3B3C36;
+
+$highlight-color: rgba(190,250,180,1);
+
+$text-color: #111;
+$text-color-dark: #000;
+$text-color-light: rgba(210,212,210,1);
+$box-color: #FF5247;
+
+$base-font-size: 16px;
+$base-line-height: 24px;

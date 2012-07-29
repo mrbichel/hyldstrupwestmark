@@ -20,15 +20,18 @@
 {% block content %}
 <div id="content-main">
 
+
     {% if occurrence.signup_set.all %}
 
     <form action="" method="post">
     {% csrf_token %}
 
-
     {% spaceless %}
     <fieldset class="grp-module grp-collapse grp-open">
 
+
+
+        {{ form.non_field_errors }}
         <div class="grp-row">
             <p class="grp-description">Send an email to all attendants of the course {{ occurrence.course.title }} on {{ occurrence.start|date }}.</p>
         </div>
@@ -67,7 +70,6 @@
             </div>
         </div>
 
-
     </fieldset>
     {% endspaceless %}
 
@@ -79,12 +81,14 @@
         </ul>
     </footer>
 
-
-
+    </form>
 
     {% else %}
-
-    <p>No one has signed up for this course yet, so you can't send them an email.</p>
+    <div class="grp-module grp-collapse grp-open">
+        <div class="grp-row">
+            <p class="grp-description">No one has signed up for this course yet, so you can't send them an email. <a href="../" c>Go back</a></p>
+        </div>
+    </div>
 
     {% endif %}
 
