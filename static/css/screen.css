@@ -114,44 +114,45 @@ h1 {
 
 /* line 70, ../sass/screen.scss */
 h2 {
-  font-size: 1.125em;
-  line-height: 1.333em;
-  color: #111111; }
+  font-size: 1.25em;
+  line-height: 1.2em;
+  color: #111111;
+  text-transform: uppercase; }
 
-/* line 77, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 #siteheader {
   border-color: #000;
   border-bottom-style: solid;
   border-bottom-width: 0.125em;
   padding-bottom: 1.375em; }
-  /* line 81, ../sass/screen.scss */
+  /* line 80, ../sass/screen.scss */
   #siteheader .container {
     padding-top: 1.5em; }
-  /* line 85, ../sass/screen.scss */
+  /* line 84, ../sass/screen.scss */
   #siteheader nav ul {
     margin-top: 1.5em; }
-    /* line 90, ../sass/screen.scss */
+    /* line 88, ../sass/screen.scss */
     #siteheader nav ul li {
       list-style-type: none;
       display: block;
       float: left;
       padding-right: 1em; }
-      /* line 96, ../sass/screen.scss */
+      /* line 94, ../sass/screen.scss */
       #siteheader nav ul li a {
         text-decoration: none;
         color: #befab4; }
-  /* line 103, ../sass/screen.scss */
+  /* line 101, ../sass/screen.scss */
   #siteheader h2 {
     color: #d2d4d2; }
-  /* line 107, ../sass/screen.scss */
+  /* line 105, ../sass/screen.scss */
   #siteheader h1.logo {
     font-size: 2.625em;
     line-height: 1.143em; }
-    /* line 109, ../sass/screen.scss */
+    /* line 107, ../sass/screen.scss */
     #siteheader h1.logo a {
       color: #fafffa; }
 
-/* line 116, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 a.button {
   display: inline-block;
   font-size: 0.875em;
@@ -172,24 +173,24 @@ a.button {
   -ms-border-radius: 4px / 4px;
   -o-border-radius: 4px / 4px;
   border-radius: 4px / 4px; }
-  /* line 133, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   a.button:hover {
     color: #befab4; }
 
-/* line 143, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #estill-logo img {
   width: auto;
   float: right;
   height: 3em; }
 
-/* line 152, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .course-list article {
   position: relative; }
-  /* line 154, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   .course-list article h1 {
     font-size: 1.625em;
     line-height: 0.923em; }
-/* line 159, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 .course-list p {
   font-size: 1.125em;
   line-height: 1.333em;
@@ -198,22 +199,22 @@ a.button {
   padding-bottom: 0em;
   margin-bottom: 1.125em; }
 
-/* line 165, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 #content {
   padding-top: 1.5em;
   color: #111111;
   background: #dfecdf; }
 
-/* line 173, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 .object-admin-navigation {
   position: absolute;
   top: 0;
   right: 0; }
-  /* line 177, ../sass/screen.scss */
+  /* line 173, ../sass/screen.scss */
   .object-admin-navigation li {
     list-style-type: none;
     display: inline; }
-    /* line 180, ../sass/screen.scss */
+    /* line 176, ../sass/screen.scss */
     .object-admin-navigation li a {
       display: inline-block;
       font-size: 0.75em;
@@ -229,14 +230,75 @@ a.button {
       -ms-border-radius: 4px / 4px;
       -o-border-radius: 4px / 4px;
       border-radius: 4px / 4px; }
-      /* line 196, ../sass/screen.scss */
+      /* line 192, ../sass/screen.scss */
       .object-admin-navigation li a:hover {
         color: #befab4; }
 
-/* line 205, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #main {
   position: relative; }
 
-/* line 207, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .flatblock {
   position: relative; }
+
+/* line 208, ../sass/screen.scss */
+#occurrences table {
+  margin-top: 1.5em;
+  border-collapse: collapse; }
+  /* line 214, ../sass/screen.scss */
+  #occurrences table thead {
+    border-bottom: solid thin; }
+  /* line 218, ../sass/screen.scss */
+  #occurrences table td, #occurrences table th {
+    padding: 0 0.5em; }
+  /* line 223, ../sass/screen.scss */
+  #occurrences table th {
+    font-weight: 200; }
+  /* line 227, ../sass/screen.scss */
+  #occurrences table td {
+    font-size: 1em;
+    line-height: 3em; }
+  /* line 231, ../sass/screen.scss */
+  #occurrences table tr.even {
+    border-top: solid thin;
+    background: #c5ddc5; }
+
+/* line 240, ../sass/screen.scss */
+#coursesignupform form ol {
+  list-style-type: none; }
+  /* line 247, ../sass/screen.scss */
+  #coursesignupform form ol label {
+    display: block;
+    font-size: 0.75em;
+    line-height: 2em;
+    font-weight: 500; }
+  /* line 253, ../sass/screen.scss */
+  #coursesignupform form ol input, #coursesignupform form ol textarea {
+    width: 100%; }
+/* line 259, ../sass/screen.scss */
+#coursesignupform input[type=submit] {
+  cursor: pointer;
+  font-size: 1.125em;
+  line-height: 1.333em;
+  margin-top: 0.375em;
+  padding-top: 0.375em;
+  padding-bottom: 0.375em;
+  margin-bottom: 0.375em;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+  color: #dfecdf;
+  background-color: #3b3c36;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px; }
+  /* line 273, ../sass/screen.scss */
+  #coursesignupform input[type=submit]:hover {
+    color: #befab4; }
+
+/* line 283, ../sass/screen.scss */
+.occurrence-detail dl dt {
+  float: left;
+  width: 90px; }

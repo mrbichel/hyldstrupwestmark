@@ -68,11 +68,10 @@ h1 {
 }
 
 h2 {
-    @include adjust-font-size-to(18px, 1);
+    @include adjust-font-size-to(20px, 1);
     color: $text-color;
+    text-transform: uppercase;
 }
-
-
 
 #siteheader {
     border-color: #000;
@@ -85,7 +84,6 @@ h2 {
     nav ul {
 
         @include leader(1);
-
 
         li {
             list-style-type: none;
@@ -133,8 +131,6 @@ a.button {
     &:hover {
         color: $highlight-color;
     }
-
-    
 }
 
 
@@ -205,3 +201,88 @@ a.button {
 #main {position: relative;}
 
 .flatblock {position: relative;}
+
+
+
+#occurrences {
+    table {
+        @include leader(1);
+        //border: 1px solid lighten($text-color, 30%);
+        border-collapse: collapse;
+        //border: solid thin $background-color-dark;
+
+        thead {
+            border-bottom: solid thin;
+        }
+
+        td, th {
+            padding: 0 0.5em;
+            //border-bottom: solid thin $background-color-dark;
+        }
+
+        th {
+            font-weight: 200;
+        }
+
+        td {
+            @include adjust-font-size-to(16px, 2);
+        }
+
+        tr.even {
+            border-top: solid thin;
+            background: darken($background-color, 8%);
+        }
+    }
+}
+
+#coursesignupform {
+    form {
+        ol {
+
+            li {
+                
+            }
+
+            list-style-type: none;
+            label {
+                display: block;
+                @include adjust-font-size-to(12px, 1);
+                font-weight: 500;
+
+            }
+            input, textarea {
+                width: 100%;
+            }
+        }
+    }
+
+    input[type=submit] {
+        //display: inline-block;
+        cursor: pointer;
+        @include adjust-font-size-to(18px, 1);
+
+        @include rhythm(0.25, 0.25, 0.25, 0.25);
+	    padding-right: 0.75em;
+        padding-left: 0.75em;
+
+	    color: $background-color;
+	    background-color: $background-color-dark;
+
+	    @include border-radius(4px, 4px);
+
+        &:hover {
+            color: $highlight-color;
+        }
+    }
+
+}
+
+
+.occurrence-detail {
+    dl {
+        dt {
+            float: left;
+            width: 90px;
+        }
+    }
+}

@@ -41,10 +41,13 @@ TIME_ZONE = 'Europe/Copenhagen'
 LANGUAGE_CODE = 'en_UK'
 SITE_ID = 1
 USE_I18N = True
-USE_L10N = True
+USE_L10N = False
 
 
 TIME_FORMAT = "H:i"
+SHORT_DATETIME_FORMAT = 'm/d/Y H:i'
+DATETIME_FORMAT	= 'N j, Y, H:i'
+
 
 GRAPPELLI_ADMIN_TITLE = "Hyldstrup & Westmark"
 GRAPPELLI_INDEX_DASHBOARD = 'hyldstrupwestmark.dashboard.CustomIndexDashboard'

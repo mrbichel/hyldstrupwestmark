@@ -113,6 +113,10 @@ class Occurrence(models.Model):
     def __unicode__(self):
         return u"{} on {}".format(self.course.title, self.start)
 
+    @models.permalink
+    def get_absolute_url(self):
+        return 'occurrence', (), {'id': self.id}
+
     def save(self, *args, **kwargs):
         if not self.end:
             self.end = self.start

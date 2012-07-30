@@ -28,25 +28,45 @@
             <h2>Coming course dates</h2>
             {% if course.get_future_occurrences %}
             <table>
-                {% for occ in course.get_future_occurrences %}
-                <tr>
-                    <td>
-                        {{ occ.start }}
+                <thead>
+                    <th>Date and time
+                    <th>Location
+                    <th>Sign up
 
-                        {% if occ.end %}
-                        to
-                            {% if occ.end.date == occ.start.date  %}
-                        {{ occ.end|time }}
-                            {% else %}
-                        {{ occ.end }}
+                <tbody>
+                {% for occ in course.get_future_occurrences %}
+                    <tr class="{% cycle 'odd' 'even' %}">
+                        <td>
+                            <a href="{{ occ.get_absolute_url }}">
+                            <time>{{ occ.start|date:"N j, H:i" }}</time>
+
+                            {% if occ.end %}
+                                to
+                                <time>
+                                  {% if occ.end.date == occ.start.date  %}
+                                    {{ occ.end|time }}
+                                  {% else %}
+                                    {{ occ.end|date:"N j, H:i" }}
+                                  {% endif %}
+                                </time>
                             {% endif %}
-                        {% endif %}
-                    </td>
+                            </a>
+
                     <td>
-                        <a href="{% url occurrence occ.id %}" class="button">sign up</a>
-                    </td>
-                </tr>
+                        {{ occ.location }}
+
+                    <td>
+
+                        {% if occ.status == occ.OPEN_STATUS %}
+                            <a href="{{ occ.get_absolute_url }}" class="button">sign up</a>
+                        {% elif occ.status == occ.CLOSED_STATUS %}
+                            Closed
+                        {% elif occ.status == occ.FULL_STATUS %}
+                            Full
+                        {% endif %}
+
                 {% endfor %}
+
                 </table>
             {% else %}
                 <p>There are no coming course dates. Contact us to let us know if you would like one scheduled.</p>

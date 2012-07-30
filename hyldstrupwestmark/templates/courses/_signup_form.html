@@ -6,19 +6,39 @@
 
         <ol>
 
-        {% for field in form %}
+
+        <li>
+            {{ form.email.errors }}
+            <label for={{ form.email.name }}>{{ form.email.label }}</label>
+            <input id=email name={{ form.email.name }} type=email placeholder="example@domain.com" required>
+        </li>
+
+        <li>
+            {{ form.first_name.errors }}
+            <label for={{ form.first_name.name }}>{{ form.first_name.label }}</label>
+            <input id={{ form.first_name.name }} name={{ form.first_name.name }} type=text placeholder="First name" required>
+        </li>
+
+        <li>
+            {{ form.last_name.errors }}
+            <label for={{ form.last_name.name }}>{{ form.last_name.label }}</label>
+            <input id={{ form.last_name.name }} name={{ form.last_name.name }} type=text placeholder="Last name" required>
+        </li>
+
+        <li>
+            {{ form.phone.errors }}
+            <label for={{ form.phone.name }}>{{ form.phone.label }}</label>
+            <input id={{ form.phone.name }} name={{ form.first_name.name }} type=phone placeholder="eg. +45 99999999">
+        </li>
 
 
+        <li>
+            {{ form.note.errors }}
+            <label for={{ form.note.name }}>{{ form.note.label }}</label>
+            <textarea id={{ form.note.name }} name={{ form.note.name }} rows=5></textarea>
 
-            <li>
-                {{ field.errors }}
-                <label for={{ field.name }}>{{ field.label }}</label>
-                {{ field }}
-            </li>
+        </li>
 
-
-
-        {% endfor %}
 
         </ol>
 

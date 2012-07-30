@@ -7,7 +7,7 @@
 
 {% block content %}
 
-    <article id="occurrence-{{ occurrence.id }}">
+    <article id="occurrence-{{ occurrence.id }}" class="occurrence-detail">
 
         <header>
 
@@ -41,30 +41,26 @@
             <dt>Price:</dt> <dd>{{ occurrence.price }} DKK</dd>
             </dl>
 
-            <p>{{ occurrence.course.description }}</p>
-            <a href="{{ occurrence.course.get_absolute_url }}" class="button">read more</a>
+            <p>{{ occurrence.course.description }} <a href="{{ occurrence.course.get_absolute_url }}">Read more</a></p>
+
         </section>
 
+        {% if occurrence.details %}
         <section class="specific-info">
             <h2>Details</h2>
             <p>{{ occurrence.details }}</p>
         </section>
+        {% endif %}
 
         <section id="coursesignupform">
-            <h2>Sign up</h2>
+            <h1>Sign up</h1>
 
             {% if occurrence.status == occurrence.OPEN_STATUS %}
-
                 {% include "courses/_signup_form.html" %}
-
             {% elif occurrence.status == occurrence.CLOSED_STATUS %}
-
-                <p>Sign up for this course is closed.</p>
-
+                <p>Sign up for this course is closed. <a href="{{ occurrence.course.get_absolute_url }}">Find another date</a></p>
             {% elif occurrence.status == occurrence.FULL_STATUS %}
-
-                <p>This course is already filled.</p>
-
+                <p>This course is already filled. </p>
             {% endif %}
 
         </section>
