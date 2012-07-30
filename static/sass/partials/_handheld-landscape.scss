@@ -13,4 +13,35 @@
 @import "partials/base";
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
+    #siteheader {
+        h1.logo {
+            @include adjust-font-size-to(26px, 1);
+        }
+        h2 {
+            @include adjust-font-size-to(18px, 1);
+        }
+
+        #estill-logo img {
+            height: 2.5em;
+            float: left;
+            @include leader(0.5);
+        }
+
+    }
+
+
+    #occurrences {
+        table {
+            th {
+               @include adjust-font-size-to(12px, 1);
+            }
+            td {
+                @include adjust-font-size-to(13px, 1);
+                .button {
+                    text-wrap: nowrap;
+                }
+            }
+        }
+    }
+
 }

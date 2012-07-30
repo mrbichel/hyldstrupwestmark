@@ -13,9 +13,51 @@
 @import "partials/base";
 
 @media screen and (max-width: 479px) {
+    
+    #siteheader {
+
+        h1.logo {
+            @include adjust-font-size-to(26px, 1);
+        }
+        h2 {
+            @include adjust-font-size-to(18px, 1);
+        }
+
+        #estill-logo img {
+            height: 2.5em;
+            float: left;
+            @include leader(0.5);
+
+        }
+
+        nav {
+
+        }
+    }
 
 	body {
-		//padding: 3em 20px !important;
 	}
-	
+
+    .wrapper {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+
+    #occurrences {
+        table {
+            th {
+               @include adjust-font-size-to(12px, 1);
+            }
+            td {
+                @include adjust-font-size-to(12px, 1);
+                .button {
+                    text-wrap: nowrap;
+                }
+            }
+        }
+    }
+
+
+
 }

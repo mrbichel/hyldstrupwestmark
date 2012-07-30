@@ -13,4 +13,13 @@
 @import "partials/base";
 
 @media screen and (min-width: 768px) and (max-width: 980px) {
+
+        #siteheader {
+            h1.logo {
+                @include adjust-font-size-to(36px, 2);
+            }
+            h2 {
+                @include adjust-font-size-to(20px, 1);
+            }
+        }
 }

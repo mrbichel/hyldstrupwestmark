@@ -4,13 +4,13 @@
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic,700italic);
 @import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700,400italic,700italic);
-/* line 4, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   margin: 0;
   padding: 0;
   border: 0; }
 
-/* line 18, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 18, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 .bp-reset-element, body, h1, h2, h3, h4, h5, h6, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, blockquote, q, th, td, caption, table,
 div, span, object, iframe, p,
 pre, a, abbr, acronym, address,
@@ -27,44 +27,53 @@ caption, tbody, tfoot, thead, tr {
   font-family: inherit;
   vertical-align: baseline; }
 
-/* line 20, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 20, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 21, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 21, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   quotes: "" ""; }
-  /* line 67, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+  /* line 67, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
   blockquote:before, blockquote:after, q:before, q:after {
     content: ""; }
 
-/* line 22, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   float: none !important;
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 23, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 23, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle; }
 
-/* line 24, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 58, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 58, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 body {
   font-size: 100%;
   line-height: 1.5em; }
 
-/* line 62, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 62, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html > body {
   font-size: 16px; }
 
-/* line 24, ../sass/screen.scss */
+/* line 58, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+body {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+/* line 62, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px; }
+
+/* line 14, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -72,39 +81,39 @@ body {
   color: #d2d4d2;
   margin: 0;
   padding: 0; }
-  /* line 31, ../sass/screen.scss */
+  /* line 21, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   body div#wrapper {
     width: 100%; }
 
-/* line 36, ../sass/screen.scss */
+/* line 26, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 p {
   font-size: 1em;
   line-height: 1.5em;
   padding: 0;
   margin: 1.5em 0; }
 
-/* line 42, ../sass/screen.scss */
+/* line 32, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 section, article {
   margin-bottom: 1.5em; }
 
-/* line 46, ../sass/screen.scss */
+/* line 36, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .section-title, #sidebar h1 {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
   font-weight: 500; }
 
-/* line 52, ../sass/screen.scss */
+/* line 42, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 h1, h2, h3, h4 {
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0; }
-  /* line 57, ../sass/screen.scss */
+  /* line 47, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   h1 a, h2 a, h3 a, h4 a {
     text-decoration: none;
     color: #111111; }
 
-/* line 63, ../sass/screen.scss */
+/* line 53, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 h1 {
   font-size: 2.25em;
   line-height: 1.333em;
@@ -112,47 +121,47 @@ h1 {
   color: #111111;
   text-transform: uppercase; }
 
-/* line 70, ../sass/screen.scss */
+/* line 60, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 h2 {
   font-size: 1.25em;
   line-height: 1.2em;
   color: #111111;
   text-transform: uppercase; }
 
-/* line 76, ../sass/screen.scss */
+/* line 66, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #siteheader {
   border-color: #000;
   border-bottom-style: solid;
   border-bottom-width: 0.125em;
   padding-bottom: 1.375em; }
-  /* line 80, ../sass/screen.scss */
+  /* line 70, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader .container {
     padding-top: 1.5em; }
-  /* line 84, ../sass/screen.scss */
+  /* line 74, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader nav ul {
     margin-top: 1.5em; }
-    /* line 88, ../sass/screen.scss */
+    /* line 78, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
     #siteheader nav ul li {
       list-style-type: none;
       display: block;
       float: left;
       padding-right: 1em; }
-      /* line 94, ../sass/screen.scss */
+      /* line 84, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
       #siteheader nav ul li a {
         text-decoration: none;
         color: #befab4; }
-  /* line 101, ../sass/screen.scss */
+  /* line 91, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader h2 {
     color: #d2d4d2; }
-  /* line 105, ../sass/screen.scss */
+  /* line 95, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader h1.logo {
     font-size: 2.625em;
     line-height: 1.143em; }
-    /* line 107, ../sass/screen.scss */
+    /* line 97, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
     #siteheader h1.logo a {
       color: #fafffa; }
 
-/* line 114, ../sass/screen.scss */
+/* line 104, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 a.button {
   display: inline-block;
   font-size: 0.875em;
@@ -173,24 +182,24 @@ a.button {
   -ms-border-radius: 4px / 4px;
   -o-border-radius: 4px / 4px;
   border-radius: 4px / 4px; }
-  /* line 131, ../sass/screen.scss */
+  /* line 121, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   a.button:hover {
     color: #befab4; }
 
-/* line 139, ../sass/screen.scss */
+/* line 129, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #estill-logo img {
   width: auto;
   float: right;
   height: 3em; }
 
-/* line 148, ../sass/screen.scss */
+/* line 138, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .course-list article {
   position: relative; }
-  /* line 150, ../sass/screen.scss */
+  /* line 140, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   .course-list article h1 {
     font-size: 1.625em;
     line-height: 0.923em; }
-/* line 155, ../sass/screen.scss */
+/* line 145, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .course-list p {
   font-size: 1.125em;
   line-height: 1.333em;
@@ -199,22 +208,22 @@ a.button {
   padding-bottom: 0em;
   margin-bottom: 1.125em; }
 
-/* line 161, ../sass/screen.scss */
+/* line 151, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #content {
   padding-top: 1.5em;
   color: #111111;
   background: #dfecdf; }
 
-/* line 169, ../sass/screen.scss */
+/* line 159, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .object-admin-navigation {
   position: absolute;
   top: 0;
   right: 0; }
-  /* line 173, ../sass/screen.scss */
+  /* line 163, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   .object-admin-navigation li {
     list-style-type: none;
     display: inline; }
-    /* line 176, ../sass/screen.scss */
+    /* line 166, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
     .object-admin-navigation li a {
       display: inline-block;
       font-size: 0.75em;
@@ -230,53 +239,54 @@ a.button {
       -ms-border-radius: 4px / 4px;
       -o-border-radius: 4px / 4px;
       border-radius: 4px / 4px; }
-      /* line 192, ../sass/screen.scss */
+      /* line 182, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
       .object-admin-navigation li a:hover {
         color: #befab4; }
 
-/* line 201, ../sass/screen.scss */
+/* line 191, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #main {
   position: relative; }
 
-/* line 203, ../sass/screen.scss */
+/* line 193, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .flatblock {
   position: relative; }
 
-/* line 208, ../sass/screen.scss */
+/* line 198, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #occurrences table {
+  width: 100%;
   margin-top: 1.5em;
   border-collapse: collapse; }
-  /* line 214, ../sass/screen.scss */
+  /* line 205, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table thead {
     border-bottom: solid thin; }
-  /* line 218, ../sass/screen.scss */
+  /* line 209, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table td, #occurrences table th {
     padding: 0 0.5em; }
-  /* line 223, ../sass/screen.scss */
+  /* line 214, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table th {
     font-weight: 200; }
-  /* line 227, ../sass/screen.scss */
+  /* line 218, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table td {
     font-size: 1em;
     line-height: 3em; }
-  /* line 231, ../sass/screen.scss */
+  /* line 222, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table tr.even {
     border-top: solid thin;
     background: #c5ddc5; }
 
-/* line 240, ../sass/screen.scss */
+/* line 231, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #coursesignupform form ol {
   list-style-type: none; }
-  /* line 247, ../sass/screen.scss */
+  /* line 238, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform form ol label {
     display: block;
     font-size: 0.75em;
     line-height: 2em;
     font-weight: 500; }
-  /* line 253, ../sass/screen.scss */
+  /* line 244, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform form ol input, #coursesignupform form ol textarea {
     width: 100%; }
-/* line 259, ../sass/screen.scss */
+/* line 250, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #coursesignupform input[type=submit] {
   cursor: pointer;
   font-size: 1.125em;
@@ -294,11 +304,114 @@ a.button {
   -ms-border-radius: 4px / 4px;
   -o-border-radius: 4px / 4px;
   border-radius: 4px / 4px; }
-  /* line 273, ../sass/screen.scss */
+  /* line 264, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform input[type=submit]:hover {
     color: #befab4; }
 
-/* line 283, ../sass/screen.scss */
+/* line 274, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .occurrence-detail dl dt {
   float: left;
   width: 90px; }
+
+/* line 58, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+body {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+/* line 62, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px; }
+
+/* line 58, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+body {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+/* line 62, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px; }
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+  /* line 18, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_tablet-portrait.scss */
+  #siteheader h1.logo {
+    font-size: 2.25em;
+    line-height: 1.333em; }
+  /* line 21, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_tablet-portrait.scss */
+  #siteheader h2 {
+    font-size: 1.25em;
+    line-height: 1.2em; } }
+/* line 58, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+body {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+/* line 62, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px; }
+
+@media screen and (max-width: 479px) {
+  /* line 19, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+  #siteheader h1.logo {
+    font-size: 1.625em;
+    line-height: 0.923em; }
+  /* line 22, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+  #siteheader h2 {
+    font-size: 1.125em;
+    line-height: 1.333em; }
+  /* line 26, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+  #siteheader #estill-logo img {
+    height: 2.5em;
+    float: left;
+    margin-top: 0.75em; }
+
+  /* line 41, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+  .wrapper {
+    padding-left: 1em;
+    padding-right: 1em; }
+
+  /* line 49, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+  #occurrences table th {
+    font-size: 0.75em;
+    line-height: 2em; }
+  /* line 52, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+  #occurrences table td {
+    font-size: 0.75em;
+    line-height: 2em; }
+    /* line 54, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld.scss */
+    #occurrences table td .button {
+      text-wrap: nowrap; } }
+/* line 58, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+body {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+/* line 62, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html > body {
+  font-size: 16px; }
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* line 17, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  #siteheader h1.logo {
+    font-size: 1.625em;
+    line-height: 0.923em; }
+  /* line 20, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  #siteheader h2 {
+    font-size: 1.125em;
+    line-height: 1.333em; }
+  /* line 24, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  #siteheader #estill-logo img {
+    height: 2.5em;
+    float: left;
+    margin-top: 0.75em; }
+
+  /* line 35, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  #occurrences table th {
+    font-size: 0.75em;
+    line-height: 2em; }
+  /* line 38, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  #occurrences table td {
+    font-size: 0.813em;
+    line-height: 1.846em; }
+    /* line 40, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+    #occurrences table td .button {
+      text-wrap: nowrap; } }
