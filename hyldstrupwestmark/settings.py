@@ -25,8 +25,8 @@ if DEVELOPMENT_MODE:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     DEBUG = False
-    MEDIA_URL = 'http://media.hw.johan.cc/'
-    STATIC_URL = 'http://static.hw.johan.cc/'
+    MEDIA_URL = 'http://media.hyldstrupwestmark.johan.cc/'
+    STATIC_URL = 'http://static.hyldstrupwestmark.johan.cc/'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 TEMPLATE_DEBUG = DEBUG
