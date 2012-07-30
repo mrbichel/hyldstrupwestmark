@@ -13,7 +13,10 @@ PRODUCTION_HOSTNAME = "tango"
 ADMINS = (
     ('Johan Bichel Lindegaard', 'sysadmin@tango.johan.cc'),
 )
-MANAGERS = ADMINS
+MANAGERS = ADMINS + (
+    ('Dorte Hyldstrup', 'dortehyldstrup@dortehyldstrup.dk'),
+)
+
 
 DEFAULT_FROM_EMAIL = "noreply@hyldstrupwestmark.com"
 
