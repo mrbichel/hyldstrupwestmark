@@ -11,7 +11,7 @@ sys.path.append(BASE_PATH + '/apps')
 PRODUCTION_HOSTNAME = "tango"
 
 ADMINS = (
-    ('Johan Bichel Lindegaard', 'sysadmin@tango.johan.cc'),
+    ('Johan Bichel Lindegaard', 'sysadmin@johan.cc'),
 )
 MANAGERS = ADMINS + (
     ('Dorte Hyldstrup', 'dortehyldstrup@dortehyldstrup.dk'),
@@ -28,8 +28,8 @@ if DEVELOPMENT_MODE:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     DEBUG = False
-    MEDIA_URL = 'http://media.hyldstrupwestmark.johan.cc/'
-    STATIC_URL = 'http://static.hyldstrupwestmark.johan.cc/'
+    MEDIA_URL = 'http://media.hyldstrupwestmark.com/'
+    STATIC_URL = 'http://static.hyldstrupwestmark.com/'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 TEMPLATE_DEBUG = DEBUG
