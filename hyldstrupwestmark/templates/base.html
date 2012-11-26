@@ -11,8 +11,8 @@
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="ltr" lang="{{ LANG }}" class="no-js"> <!--<![endif]-->
 <head>
-    <title>{% block title %}Hyldstrup og Westmark{% endblock %}</title>
-    <meta name="description" content="{% block description %}Estill Voice stemmetræning{% endblock %}">
+    <title>{% block title %}Estill voice training with Hyldstrup & Westmark{% endblock %}</title>
+    <meta name="description" content="{% block description %}Estill Voice training in Europe with Dorte Hyldstrup and Helga Westmark{% endblock %}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
@@ -35,12 +35,13 @@
 
             <div class="l-2c">
                 <hgroup class="c-1">
+                    <h2>{% trans "Estill voice training in Europe" %}</h2>
                     <h1 class="logo"><a href="{% url index %}">Hyldstrup &amp; Westmark</a></h1>
-                    <h2>{% trans "International Voice Training" %}</h2>
+
                 </hgroup>
 
                 <div id="estill-logo" class="c-2">
-                    <img width="240px" src="{{ STATIC_URL }}img/estill_logo.jpg">
+                    <img width="300px" src="{{ STATIC_URL }}img/estill_logo.jpg">
                 </div>
                 
             </div>
@@ -50,9 +51,9 @@
                 <ul>
                     <li><a href="/">{% trans 'Home' %}</a></li>
                     <li><a href="{% url course_list %}">{% trans 'Courses' %}</a></li>
-                {% for page in flatpages %}
-                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
+                    <li><a href="/about/">{% trans 'About' %}</a></li>
+                    <li><a href="/contact/">{% trans 'Contact' %}</a></li>
+
                 </ul>
 
             </nav>
@@ -83,8 +84,25 @@
 
     <footer id="sitefooter" class="wrapper">
         <div class="container g-all-c">
-            <p>{% flatblock "footer" %}</p>
+
+            <div class="c-1">{% flatblock "footer" %}
+            </div>
             <!--<p>Hosted on a linode, powered by django and python developed by johan.cc</p>-->
+
+            <nav class="c-1">
+
+
+            <ul>
+
+                <li><a href="/">{% trans 'Home' %}</a></li>
+                    <li><a href="{% url course_list %}">{% trans 'Courses' %}</a></li>
+            
+                {% for page in flatpages %}
+                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+            </nav>
+
         </div>
     </footer>
 

@@ -134,6 +134,10 @@ class Signup(models.Model):
     last_name = models.CharField('Last name', max_length=150)
     time = models.DateTimeField('Time', default=datetime.datetime.now, editable=False)
     note = models.TextField('Note', blank=True)
+    address = models.TextField('Address',)
+    postal_code = models.CharField('Postal code', max_length=20)
+    country = models.CharField('Country', max_length=40)
+    profession = models.CharField('Profession', blank=True, max_length=80)
 
     def __unicode__(self):
         return u"{} signed up for {}".format(self.first_name, self.occurrence.course.title)

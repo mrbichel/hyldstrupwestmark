@@ -16,17 +16,21 @@
 @import "compass/css3";
 
 // font-families
+$headline-font-family: 'Quattrocento Sans';
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // colors
 $background-color: #DFECDF;
-$background-color-dark: #3B3C36;
+$background-color-dark: #4F3700;
 
-$highlight-color: rgba(190,250,180,1);
+$highlight-color: #EFFF8A;
 
 $text-color: #111;
 $text-color-dark: #000;
-$text-color-light: rgba(210,212,210,1);
+$text-color-light: #F7F7F7;
+
+$light-header-color: #FFF;
+
 $box-color: #FF5247;
 
 $base-font-size: 16px;

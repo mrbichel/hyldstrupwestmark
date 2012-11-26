@@ -77,8 +77,8 @@ html > body {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  background-color: #3b3c36;
-  color: #d2d4d2;
+  background-color: #4f3700;
+  color: #f7f7f7;
   margin: 0;
   padding: 0; }
   /* line 21, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
@@ -101,67 +101,99 @@ section, article {
   font-size: 1em;
   line-height: 1.5em;
   margin-bottom: 1.5em;
-  font-weight: 500; }
+  font-weight: 500;
+  text-transform: uppercase; }
 
-/* line 42, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 43, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 h1, h2, h3, h4 {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Quattrocento Sans";
   padding: 0; }
-  /* line 47, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 48, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   h1 a, h2 a, h3 a, h4 a {
     text-decoration: none;
     color: #111111; }
 
-/* line 53, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 54, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 h1 {
   font-size: 2.25em;
   line-height: 1.333em;
   font-weight: 200;
-  color: #111111;
-  text-transform: uppercase; }
+  color: #111111; }
 
-/* line 60, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 61, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 h2 {
-  font-size: 1.25em;
-  line-height: 1.2em;
-  color: #111111;
-  text-transform: uppercase; }
+  font-size: 1.75em;
+  line-height: 0.857em;
+  color: #111111; }
 
-/* line 66, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 67, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #siteheader {
-  border-color: #000;
+  border-color: #e8ff57;
   border-bottom-style: solid;
   border-bottom-width: 0.125em;
   padding-bottom: 1.375em; }
-  /* line 70, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 71, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader .container {
     padding-top: 1.5em; }
-  /* line 74, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 75, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader nav ul {
     margin-top: 1.5em; }
-    /* line 78, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+    /* line 79, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
     #siteheader nav ul li {
       list-style-type: none;
       display: block;
       float: left;
       padding-right: 1em; }
-      /* line 84, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+      /* line 85, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
       #siteheader nav ul li a {
         text-decoration: none;
-        color: #befab4; }
-  /* line 91, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+        color: #efff8a; }
+  /* line 92, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader h2 {
-    color: #d2d4d2; }
-  /* line 95, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+    color: white;
+    font-size: 1.875em;
+    line-height: 1.6em; }
+  /* line 97, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #siteheader h1.logo {
-    font-size: 2.625em;
-    line-height: 1.143em; }
-    /* line 97, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+    font-size: 2.25em;
+    line-height: 1.333em; }
+    /* line 99, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
     #siteheader h1.logo a {
-      color: #fafffa; }
+      color: white; }
 
-/* line 104, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 109, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+#sitefooter nav ul li {
+  list-style-type: none;
+  display: block;
+  float: left;
+  padding-right: 1em; }
+  /* line 115, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  #sitefooter nav ul li a {
+    text-decoration: none;
+    color: #efff8a; }
+
+/* line 127, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+nav.flatpage-nav ul li {
+  list-style-type: none;
+  display: block;
+  float: left;
+  padding-right: 1em; }
+  /* line 133, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  nav.flatpage-nav ul li a {
+    text-decoration: none;
+    color: #100075; }
+
+/* line 142, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+#s1 {
+  overflow: hidden;
+  height: 15em; }
+  /* line 145, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  #s1 img {
+    width: 100%;
+    height: auto; }
+
+/* line 152, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 a.button {
   display: inline-block;
   font-size: 0.875em;
@@ -175,31 +207,31 @@ a.button {
   whitespace: nowrap;
   text-align: center;
   text-decoration: none;
-  color: #dfecdf;
-  background-color: #3b3c36;
+  color: white;
+  background-color: #3b2900;
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
   -ms-border-radius: 4px / 4px;
   -o-border-radius: 4px / 4px;
   border-radius: 4px / 4px; }
-  /* line 121, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 169, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   a.button:hover {
-    color: #befab4; }
+    color: #efff8a; }
 
-/* line 129, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 177, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #estill-logo img {
   width: auto;
   float: right;
   height: 3em; }
 
-/* line 138, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 186, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .course-list article {
   position: relative; }
-  /* line 140, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 188, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   .course-list article h1 {
     font-size: 1.625em;
     line-height: 0.923em; }
-/* line 145, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 193, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .course-list p {
   font-size: 1.125em;
   line-height: 1.333em;
@@ -208,22 +240,22 @@ a.button {
   padding-bottom: 0em;
   margin-bottom: 1.125em; }
 
-/* line 151, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 199, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #content {
   padding-top: 1.5em;
   color: #111111;
   background: #dfecdf; }
 
-/* line 159, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 207, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .object-admin-navigation {
   position: absolute;
   top: 0;
   right: 0; }
-  /* line 163, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 211, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   .object-admin-navigation li {
     list-style-type: none;
     display: inline; }
-    /* line 166, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+    /* line 214, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
     .object-admin-navigation li a {
       display: inline-block;
       font-size: 0.75em;
@@ -233,60 +265,60 @@ a.button {
       text-align: center;
       text-decoration: none;
       color: #dfecdf;
-      background-color: rgba(19, 20, 18, 0.5);
+      background-color: rgba(3, 2, 0, 0.5);
       -webkit-border-radius: 4px 4px;
       -moz-border-radius: 4px / 4px;
       -ms-border-radius: 4px / 4px;
       -o-border-radius: 4px / 4px;
       border-radius: 4px / 4px; }
-      /* line 182, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+      /* line 230, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
       .object-admin-navigation li a:hover {
-        color: #befab4; }
+        color: #efff8a; }
 
-/* line 191, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 239, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #main {
   position: relative; }
 
-/* line 193, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 241, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .flatblock {
   position: relative; }
 
-/* line 198, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 246, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #occurrences table {
   width: 100%;
   margin-top: 1.5em;
   border-collapse: collapse; }
-  /* line 205, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 253, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table thead {
     border-bottom: solid thin; }
-  /* line 209, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 257, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table td, #occurrences table th {
     padding: 0 0.5em; }
-  /* line 214, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 262, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table th {
     font-weight: 200; }
-  /* line 218, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 266, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table td {
     font-size: 1em;
     line-height: 3em; }
-  /* line 222, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 270, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table tr.even {
     border-top: solid thin;
     background: #c5ddc5; }
 
-/* line 231, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 279, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #coursesignupform form ol {
   list-style-type: none; }
-  /* line 238, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 286, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform form ol label {
     display: block;
     font-size: 0.75em;
     line-height: 2em;
     font-weight: 500; }
-  /* line 244, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 292, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform form ol input, #coursesignupform form ol textarea {
     width: 100%; }
-/* line 250, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 298, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #coursesignupform input[type=submit] {
   cursor: pointer;
   font-size: 1.125em;
@@ -298,17 +330,17 @@ a.button {
   padding-right: 0.75em;
   padding-left: 0.75em;
   color: #dfecdf;
-  background-color: #3b3c36;
+  background-color: #4f3700;
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px / 4px;
   -ms-border-radius: 4px / 4px;
   -o-border-radius: 4px / 4px;
   border-radius: 4px / 4px; }
-  /* line 264, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 312, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform input[type=submit]:hover {
-    color: #befab4; }
+    color: #efff8a; }
 
-/* line 274, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 322, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .occurrence-detail dl dt {
   float: left;
   width: 90px; }
@@ -404,14 +436,14 @@ html > body {
     float: left;
     margin-top: 0.75em; }
 
-  /* line 35, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  /* line 34, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
   #occurrences table th {
     font-size: 0.75em;
     line-height: 2em; }
-  /* line 38, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+  /* line 37, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
   #occurrences table td {
     font-size: 0.813em;
     line-height: 1.846em; }
-    /* line 40, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
+    /* line 39, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_handheld-landscape.scss */
     #occurrences table td .button {
       text-wrap: nowrap; } }
