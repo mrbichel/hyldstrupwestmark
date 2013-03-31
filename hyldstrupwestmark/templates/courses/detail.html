@@ -37,6 +37,7 @@
                 {% for occ in course.get_future_occurrences %}
                     <tr class="{% cycle 'odd' 'even' %}">
                         <td>
+                        <p>
                             <a href="{{ occ.get_absolute_url }}">
                             <time>{{ occ.start|date:"N j, H:i" }}</time>
 
@@ -51,11 +52,12 @@
                                 </time>
                             {% endif %}
                             </a>
+                        </p>
 
                     <td>
-                        {{ occ.location }}
+                        <p>{{ occ.location }}</p>
 
-                    <td>
+                    <td class="signup">
 
                         {% if occ.status == occ.OPEN_STATUS %}
                             <a href="{{ occ.get_absolute_url }}" class="button">sign up</a>

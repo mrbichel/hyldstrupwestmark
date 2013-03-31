@@ -31,14 +31,35 @@
             <input id={{ form.phone.name }} name={{ form.phone.name }} type=phone placeholder="eg. +45 99999999">
         </li>
 
+        <li>
+            {{ form.address.errors }}
+            <label for={{ form.address.name }}>{{ form.address.label }}</label>
+            <input id={{ form.address.name }} name={{ form.address.name }} type=text required>
+        </li>
+
+       <li>
+            {{ form.postal_code.errors }}
+            <label for={{ form.postal_code.name }}>{{ form.postal_code.label }}</label>
+            <input id={{ form.postal_code.name }} name={{ form.postal_code.name }} type=text required>
+       </li>
+
+       <li>
+            {{ form.country.errors }}
+            <label for={{ form.country.name }}>{{ form.country.label }}</label>
+            <input id={{ form.country.name }} name={{ form.country.name }} type=text required>
+       </li>
+
+       <li>
+            {{ form.profession.errors }}
+            <label for={{ form.profession.name }}>{{ form.profession.label }}</label>
+            <input id={{ form.profession.name }} name={{ form.profession.name }} type=text required>
+       </li>
 
         <li>
             {{ form.note.errors }}
             <label for={{ form.note.name }}>{{ form.note.label }}</label>
             <textarea id={{ form.note.name }} name={{ form.note.name }} rows=5></textarea>
-
         </li>
-
 
         </ol>
 

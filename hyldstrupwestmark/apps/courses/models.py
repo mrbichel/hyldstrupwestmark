@@ -55,6 +55,8 @@ class Course(models.Model):
 
     status = models.PositiveIntegerField(choices=STATUS_CHOICES, default=DRAFT_STATUS)
 
+    priority = models.IntegerField(default=0, help_text="Use this to sort the courses.");
+
     objects = models.Manager()
 
     public_objects = PublicCourseManager()
@@ -100,9 +102,7 @@ class Occurrence(models.Model):
     start = models.DateTimeField(default=datetime.datetime.now)
     end = models.DateTimeField(blank=True)
 
-    price = models.PositiveIntegerField(help_text='Price in DKK',
-        default=0,
-    )
+    price = models.CharField(max_length=200, blank=True)
 
     location = models.CharField(max_length=200)
     details = models.TextField(help_text="Specific information for this occurrence. e.g. how to find the location or where to get a good lunch nearby.", blank=True)
@@ -135,6 +135,7 @@ class Signup(models.Model):
     time = models.DateTimeField('Time', default=datetime.datetime.now, editable=False)
     note = models.TextField('Note', blank=True)
     address = models.TextField('Address',)
+    billing_address = models.TextField('Billing Address', help_text="If different from address.", blank=True)
     postal_code = models.CharField('Postal code', max_length=20)
     country = models.CharField('Country', max_length=40)
     profession = models.CharField('Profession', blank=True, max_length=80)

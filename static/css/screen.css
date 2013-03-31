@@ -294,31 +294,37 @@ a.button {
   /* line 257, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table td, #occurrences table th {
     padding: 0 0.5em; }
-  /* line 262, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+    /* line 260, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+    #occurrences table td p, #occurrences table th p {
+      line-height: 1.2; }
+  /* line 265, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table th {
     font-weight: 200; }
-  /* line 266, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 269, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  #occurrences table td.signup {
+    width: 75px; }
+  /* line 273, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table td {
     font-size: 1em;
     line-height: 3em; }
-  /* line 270, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 277, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #occurrences table tr.even {
     border-top: solid thin;
     background: #c5ddc5; }
 
-/* line 279, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 286, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #coursesignupform form ol {
   list-style-type: none; }
-  /* line 286, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 293, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform form ol label {
     display: block;
     font-size: 0.75em;
     line-height: 2em;
     font-weight: 500; }
-  /* line 292, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 299, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform form ol input, #coursesignupform form ol textarea {
     width: 100%; }
-/* line 298, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 305, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 #coursesignupform input[type=submit] {
   cursor: pointer;
   font-size: 1.125em;
@@ -336,11 +342,11 @@ a.button {
   -ms-border-radius: 4px / 4px;
   -o-border-radius: 4px / 4px;
   border-radius: 4px / 4px; }
-  /* line 312, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+  /* line 319, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
   #coursesignupform input[type=submit]:hover {
     color: #efff8a; }
 
-/* line 322, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
+/* line 329, /Users/johan/dev/hyldstrupwestmark/static/sass/partials/_default.scss */
 .occurrence-detail dl dt {
   float: left;
   width: 90px; }

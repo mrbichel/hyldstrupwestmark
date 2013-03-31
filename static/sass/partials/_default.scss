@@ -257,10 +257,17 @@ a.button {
         td, th {
             padding: 0 0.5em;
             //border-bottom: solid thin $background-color-dark;
+            p {
+                line-height: 1.2;
+            }
         }
 
         th {
             font-weight: 200;
+        }
+
+        td.signup {
+            width: 75px;
         }
 
         td {

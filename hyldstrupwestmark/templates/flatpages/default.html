@@ -10,7 +10,6 @@
     <article id="{{ flatpage.slug }}">
 
         <header>
-
             {% if user.is_staff %}
             <ul class="object-admin-navigation">
                 <li><a href="{% url admin:flatpages_flatpage_change flatpage.id %}">edit</a></li>
@@ -31,12 +30,9 @@
 
                 </ul>
             </nav>
-
         </header>
 
         {{ flatpage.content|markdown }}
-    
     </article>
-
 
 {% endblock %}
