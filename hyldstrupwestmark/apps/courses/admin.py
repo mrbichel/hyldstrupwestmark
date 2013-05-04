@@ -29,7 +29,7 @@ class OccurrenceAdmin(admin.ModelAdmin):
 admin.site.register(Occurrence, OccurrenceAdmin)
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display  = ('title',)
+    list_display  = ('title', 'priority')
     search_fields = ('title', 'description', 'body')
     prepopulated_fields = {'slug': ('title',)}
 
@@ -37,7 +37,7 @@ class CourseAdmin(admin.ModelAdmin):
     
     fieldsets = (
         (None, {
-            'fields': (('title', 'slug'), 'description', 'body', 'status')
+            'fields': (('title', 'slug'), 'description', 'body', 'status', 'priority')
         }),
     )
 admin.site.register(Course, CourseAdmin)

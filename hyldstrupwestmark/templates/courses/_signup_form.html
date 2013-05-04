@@ -31,6 +31,21 @@
             <input id={{ form.phone.name }} name={{ form.phone.name }} type=phone placeholder="eg. +45 99999999">
         </li>
 
+       
+
+       <li>
+            {{ form.profession.errors }}
+            <label for={{ form.profession.name }}>{{ form.profession.label }}</label>
+            <input id={{ form.profession.name }} name={{ form.profession.name }} type=text required>
+       </li>
+
+        <li>
+            {{ form.note.errors }}
+            <label for={{ form.note.name }}>{{ form.note.label }}</label>
+            <textarea id={{ form.note.name }} name={{ form.note.name }} rows=5></textarea>
+        </li>
+				
+				
         <li>
             {{ form.address.errors }}
             <label for={{ form.address.name }}>{{ form.address.label }}</label>
@@ -48,18 +63,27 @@
             <label for={{ form.country.name }}>{{ form.country.label }}</label>
             <input id={{ form.country.name }} name={{ form.country.name }} type=text required>
        </li>
-
+				
+			 <hr>
+			 <h3>Billing address, if different than above.</h3>
        <li>
-            {{ form.profession.errors }}
-            <label for={{ form.profession.name }}>{{ form.profession.label }}</label>
-            <input id={{ form.profession.name }} name={{ form.profession.name }} type=text required>
+           {{ form.billing_address.errors }}
+           <label for={{ form.billing_address.name }}>{{ form.billing_address.label }}</label>
+           <input id={{ form.billing_address.name }} name={{ form.billing_address.name }} type=text required>
        </li>
 
-        <li>
-            {{ form.note.errors }}
-            <label for={{ form.note.name }}>{{ form.note.label }}</label>
-            <textarea id={{ form.note.name }} name={{ form.note.name }} rows=5></textarea>
-        </li>
+      <li>
+           {{ form.billing_postal_code.errors }}
+           <label for={{ form.billing_postal_code.name }}>{{ form.billing_postal_code.label }}</label>
+           <input id={{ form.billing_postal_code.name }} name={{ form.billing_postal_code.name }} type=text required>
+      </li>
+
+      <li>
+           {{ form.billing_country.errors }}
+           <label for={{ form.billing_country.name }}>{{ form.billing_country.label }}</label>
+           <input id={{ form.billing_country.name }} name={{ form.billing_country.name }} type=text required>
+      </li>
+				
 
         </ol>
 

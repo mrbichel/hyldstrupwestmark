@@ -48,7 +48,7 @@
         {% if occurrence.details %}
         <section class="specific-info">
             <h2>Details</h2>
-            <p>{{ occurrence.details }}</p>
+            <p>{{ occurrence.details|markdown }}</p>
         </section>
         {% endif %}
 

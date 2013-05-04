@@ -55,7 +55,7 @@ class Course(models.Model):
 
     status = models.PositiveIntegerField(choices=STATUS_CHOICES, default=DRAFT_STATUS)
 
-    priority = models.IntegerField(default=0, help_text="Use this to sort the courses.");
+    priority = models.IntegerField(default=0, help_text="Use this to sort the courses. Lower numbers come first.");
 
     objects = models.Manager()
 
@@ -135,9 +135,13 @@ class Signup(models.Model):
     time = models.DateTimeField('Time', default=datetime.datetime.now, editable=False)
     note = models.TextField('Note', blank=True)
     address = models.TextField('Address',)
-    billing_address = models.TextField('Billing Address', help_text="If different from address.", blank=True)
     postal_code = models.CharField('Postal code', max_length=20)
     country = models.CharField('Country', max_length=40)
+    
+    billing_address = models.TextField('Billing Address', help_text="If different from address.", blank=True)
+    billing_postal_code = models.CharField('Billing Postal code', max_length=20, blank=True)
+    billing_country = models.CharField('Billing Country', max_length=40, blank=True)
+    
     profession = models.CharField('Profession', blank=True, max_length=80)
 
     def __unicode__(self):

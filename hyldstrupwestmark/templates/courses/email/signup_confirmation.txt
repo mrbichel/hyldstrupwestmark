@@ -2,8 +2,6 @@
 
 This is a confirmation that we have received your request to sign up for the course {{ data.occurrence.course.title }}
 
-Please transfer {{ data.occurrence.price }} DKK to account number XXXXXX.
-
 Course details:
 Start: {{ data.occurrence.start }}
 End: {{ data.occurrence.end }}
@@ -16,6 +14,8 @@ Phone: {{ data.phone }}
 First name: {{ data.first_name }}
 Last name: {{ data.last_name }}
 Note: {{ data.note }}
+
+To confirm your participation you must pay the NONREFUNDABLE course fee according to the invoice that we will email you. If you have to cancel your attendance we will keep the course fee unless we have a waiting list and someone else can take over and buy your place!
 
 Kind Regards Hyldstrup & Westmark
 
