@@ -48,7 +48,7 @@ def occurrence(request, id):
 
 
 def list(request):
-    course_list = Course.public_objects.filter()
+    course_list = Course.public_objects.filter().order_by('priority')
 
     return render(request, 'courses/list.html', {
         'course_list': course_list

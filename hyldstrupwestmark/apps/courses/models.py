@@ -14,13 +14,13 @@ def format_html(markdownText):
 class PublicCourseManager(models.Manager):
     """Manager for published courses returns courses with status public"""
     def get_query_set(self):
-        qs = super(PublicCourseManager, self).get_query_set()
+        qs = super(PublicCourseManager, self).get_query_set().order_by("priority")
         return qs
 
 class FutureOccurrenceManager(models.Manager):
     """Manager for future occurrences returns occurrences of courses with a end date in the future """
     def get_query_set(self):
-        return super(FutureOccurrenceManager, self).get_query_set().filter(end__gte=datetime.datetime.now())
+        return super(FutureOccurrenceManager, self).get_query_set().filter(end__gte=datetime.datetime.now()).order_by("start")
 
 class Course(models.Model):
     """
