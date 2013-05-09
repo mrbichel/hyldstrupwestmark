@@ -62,7 +62,7 @@ class Course(models.Model):
     public_objects = PublicCourseManager()
 
     def get_future_occurrences(self):
-        return self.occurrence_set.filter(end__gte=datetime.datetime.now())
+        return self.occurrence_set.filter(end__gte=datetime.datetime.now()).order_by("start")
 
     def __unicode__(self):
         return self.title
