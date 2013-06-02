@@ -17,8 +17,9 @@ MANAGERS = ADMINS + (
     ('Dorte Hyldstrup', 'dortehyldstrup@dortehyldstrup.dk'),
 )
 
+DEFAULT_FROM_EMAIL = "noreply@estillvoicecenternordic.com"
 
-DEFAULT_FROM_EMAIL = "noreply@hyldstrupwestmark.com"
+SERVER_EMAIL = "root@tango.johan.cc"
 
 DEVELOPMENT_MODE = (platform.node() != PRODUCTION_HOSTNAME)
 if DEVELOPMENT_MODE:
@@ -28,8 +29,8 @@ if DEVELOPMENT_MODE:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     DEBUG = False
-    MEDIA_URL = 'http://media.hyldstrupwestmark.com/'
-    STATIC_URL = 'http://static.hyldstrupwestmark.com/'
+    MEDIA_URL = 'http://media.hestillvoicecenternordic.com/'
+    STATIC_URL = 'http://static.estillvoicecenternordic.com/'
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 TEMPLATE_DEBUG = DEBUG
