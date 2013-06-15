@@ -15,6 +15,7 @@ ADMINS = (
 )
 MANAGERS = ADMINS + (
     ('Dorte Hyldstrup', 'dortehyldstrup@dortehyldstrup.dk'),
+    ('Helga Westmark', 'hsw.apw@privat.dk'),
 )
 
 DEFAULT_FROM_EMAIL = "noreply@estillvoicecenternordic.com"
